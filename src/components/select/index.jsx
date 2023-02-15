@@ -17,7 +17,7 @@ export const SelectDropdown = () => {
         getPlacesAsync({
           location: `${latitude},${longitude}`,
           radius: 5000,
-          category: selectedValue.value,
+          type: selectedValue.value,
           key: process.env.REACT_APP_GOOGLE_PLACE_SEARCH_API_KEY,
         })
       );
