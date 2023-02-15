@@ -1,7 +1,6 @@
 .places-page {
   width: 100vw;
   height: 100vh;
-  background-color: lightcyan;
   display: flex;
   flex-direction: column;
 }
@@ -12,17 +11,16 @@
 
 .places-page__main {
   flex: 1;
-  border: 5px solid red;
   display: flex;
+  overflow: hidden;
 }
 
 .places-page__list {
   width: 20rem;
-  background-color: rebeccapurple;
+  height: 100%;
 }
 
 .places-page__maps-ui {
-  background-color: rosybrown;
   flex: 1;
 }
 
@@ -33,7 +31,7 @@
 
   .places-page__list {
     width: 100%;
-    background-color: rebeccapurple;
     height: auto;
+    max-height: 140px;
   }
 }

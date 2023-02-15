@@ -1,10 +1,12 @@
 import { Fallback } from "../components/fallback";
 import { Header } from "../components/header";
 import { MapsWidget } from "../components/map";
+import { PlacesList } from "../components/place_list";
 import { useLocationContext } from "../store/LocationContext";
+
 import "./searchplace.css";
 
-export const SearchPlace = (props) => {
+export const SearchPlace = () => {
   const { hasPermission } = useLocationContext();
   return (
     <div className="places-page">
@@ -14,7 +16,9 @@ export const SearchPlace = (props) => {
       <main className="places-page__main">
         {hasPermission ? (
           <>
-            <aside className="places-page__list">Places list</aside>
+            <aside className="places-page__list">
+              <PlacesList />
+            </aside>
             <section className="places-page__maps-ui">
               <MapsWidget />
             </section>
