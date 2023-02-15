@@ -25,12 +25,22 @@ export const NearbyPlacesSlice = createSlice({
     updateFailure: (state, action) => {
       state.error = true;
     },
+    resetPlaces: (state) => {
+      state.error = false;
+      state.result = [];
+      state.loading = false;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { requestLoading, cancelLoading, updatePlaces, updateFailure } =
-  NearbyPlacesSlice.actions;
+export const {
+  requestLoading,
+  cancelLoading,
+  updatePlaces,
+  updateFailure,
+  resetPlaces,
+} = NearbyPlacesSlice.actions;
 
 export const getPlacesAsync = (config = {}) => {
   return async (dispatch) => {

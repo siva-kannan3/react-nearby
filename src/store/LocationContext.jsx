@@ -63,10 +63,8 @@ export const UserLocationProvider = ({ children }) => {
     <LocationContext.Provider
       value={{
         hasPermission,
-        coordinates: {
-          longitude: coordinates.long,
-          latitude: coordinates.lati,
-        },
+        longitude: coordinates.long,
+        latitude: coordinates.lati,
       }}
     >
       {children}

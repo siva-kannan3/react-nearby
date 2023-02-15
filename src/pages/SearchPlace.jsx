@@ -1,4 +1,5 @@
 import { Fallback } from "../components/fallback";
+import { Header } from "../components/header";
 import { useLocationContext } from "../store/LocationContext";
 import "./searchplace.css";
 
@@ -6,7 +7,9 @@ export const SearchPlace = (props) => {
   const { hasPermission } = useLocationContext();
   return (
     <div className="places-page">
-      <header className="places-page__header">Heading</header>
+      <header className="places-page__header">
+        <Header />
+      </header>
       <main className="places-page__main">
         {hasPermission ? (
           <>
