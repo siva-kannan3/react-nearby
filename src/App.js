@@ -1,10 +1,11 @@
+import { UserLocationProvider } from "./store/LocationContext";
 import { SearchPlace } from "./pages";
 
 function App() {
   return (
-    <div className="App">
+    <UserLocationProvider>
       <SearchPlace />
-    </div>
+    </UserLocationProvider>
   );
 }
 

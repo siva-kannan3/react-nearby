@@ -1,0 +1,40 @@
+.places-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightcyan;
+  display: flex;
+  flex-direction: column;
+}
+
+.places-page__header {
+  height: 60px;
+  border: 5px solid black;
+}
+
+.places-page__main {
+  flex: 1;
+  border: 5px solid red;
+  display: flex;
+}
+
+.places-page__list {
+  width: 20rem;
+  background-color: rebeccapurple;
+}
+
+.places-page__maps-ui {
+  background-color: rosybrown;
+  flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .places-page__main {
+    flex-direction: column-reverse;
+  }
+
+  .places-page__list {
+    width: 100%;
+    background-color: rebeccapurple;
+    height: auto;
+  }
+}
