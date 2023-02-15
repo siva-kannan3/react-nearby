@@ -8,7 +8,7 @@ export const MapService = {
       const result = await response.json();
       return {
         status: "success",
-        result,
+        result: result.results,
       };
     } catch (err) {
       return {
