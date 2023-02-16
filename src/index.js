@@ -11,10 +11,10 @@ import "./index.css";
 const app = document.getElementById("root");
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  app
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    app
 );
 
 // If you want to start measuring performance in your app, pass a function
