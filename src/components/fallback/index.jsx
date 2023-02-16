@@ -15,11 +15,11 @@ export const Fallback = (props) => {
                 width={64}
                 height={64}
             />
-            <h2>{message}</h2>
+            <h2 data-testid="fallback-message">{message}</h2>
         </div>
     );
 };
 
 Fallback.propTypes = {
-    message: PropTypes.string,
+    message: PropTypes.string.isRequired,
 };
