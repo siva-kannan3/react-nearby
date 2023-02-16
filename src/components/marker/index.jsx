@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./index.css";
 
 export const Marker = (props) => {
-    const { color = "", name } = props;
+    const { color = "", name = "" } = props;
     return (
         <div className="marker">
             <div
@@ -19,5 +19,5 @@ export const Marker = (props) => {
 
 Marker.propTypes = {
     color: PropTypes.string,
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
 };
