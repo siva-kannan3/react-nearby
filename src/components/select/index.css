@@ -1,10 +1,10 @@
 .dropdown {
-  min-width: 30rem;
+    min-width: 30rem;
 }
 
 @media screen and (max-width: 768px) {
-  .dropdown {
-    width: 100%;
-    min-width: 100%;
-  }
+    .dropdown {
+        width: 100%;
+        min-width: 100%;
+    }
 }

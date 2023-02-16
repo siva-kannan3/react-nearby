@@ -1,28 +1,28 @@
 .header {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-inline: 16px;
-  background-color: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 16px;
+    background-color: black;
 }
 
 .header__dropdown {
-  flex: 1;
-  padding-inline: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    flex: 1;
+    padding-inline: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header__profile {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  color: black;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
 }
