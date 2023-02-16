@@ -30,7 +30,13 @@ export const Header = () => {
 
     return (
         <div className="header">
-            <img src={logo} alt="BrowserStack's logo" width={48} height={48} />
+            <img
+                src={logo}
+                alt="BrowserStack's logo"
+                width={48}
+                height={48}
+                data-testid="logo"
+            />
             <div className="header__dropdown">
                 <SelectDropdown
                     options={CATEGORIES_LIST}
