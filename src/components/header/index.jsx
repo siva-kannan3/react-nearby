@@ -7,10 +7,9 @@ import {
     resetPlaces,
 } from "../../pages/search_place/places.slice";
 import { useLocationContext } from "../../store/location.context";
+import logo from "./logo.svg";
 
 import "./index.css";
-
-import logo from "./logo.svg";
 
 export const Header = () => {
     const dispatch = useDispatch();

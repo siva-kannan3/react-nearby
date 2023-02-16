@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
-import "./index.css";
-
 import fallbackLogo from "./icon.svg";
+
+import "./index.css";
 
 export const Fallback = (props) => {
     const { message } = props;
