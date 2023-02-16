@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import { Fallback } from "../components/fallback";
 import { Header } from "../components/header";
 import { MapsWidget } from "../components/map";
@@ -8,6 +9,9 @@ import "./searchplace.css";
 
 export const SearchPlace = () => {
     const { hasPermission } = useLocationContext();
+
+    const { result } = useSelector((state) => state.places);
+
     return (
         <div className="places-page">
             <header className="places-page__header">
@@ -17,7 +21,7 @@ export const SearchPlace = () => {
                 {hasPermission ? (
                     <>
                         <aside className="places-page__list">
-                            <PlacesList />
+                            <PlacesList places={result} />
                         </aside>
                         <section className="places-page__maps-ui">
                             <MapsWidget />

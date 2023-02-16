@@ -1,21 +1,22 @@
-import { useSelector } from "react-redux";
+import PropTypes from "prop-types";
+
 import { Fallback } from "../fallback";
 
 import "./index.css";
 
-export const PlacesList = () => {
-    const { result } = useSelector((state) => state.places);
-
-    if (!result.length) {
+export const PlacesList = ({ places = [] }) => {
+    if (!places.length) {
         return <Fallback message={"No data to display"} />;
     }
     return (
-        <div className="place-list">
-            {result.map((mapEntry) => {
+        <div className="place-list" data-testid={"places-list"}>
+            {places.map((mapEntry) => {
                 return (
                     <div key={mapEntry.place_id} className="place-list__card">
                         <div className="place-list__card-info">
-                            <span>{mapEntry.name}</span>
+                            <span data-testid="place-list-card-name">
+                                {mapEntry.name}
+                            </span>
                             <span>⭐ {mapEntry.rating || 0}</span>
                         </div>
                         <div className="place-list__card-rating">
@@ -29,4 +30,15 @@ export const PlacesList = () => {
             })}
         </div>
     );
+};
+
+PlacesList.propTypes = {
+    places: PropTypes.arrayOf(
+        PropTypes.shape({
+            name: PropTypes.string,
+            rating: PropTypes.number,
+            user_ratings_total: PropTypes.number,
+            place_id: PropTypes.string,
+        })
+    ),
 };
