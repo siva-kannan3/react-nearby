@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { MapService } from "../service";
+import { MapService } from "../../service";
 
 const initialState = {
     result: [],

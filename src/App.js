@@ -1,4 +1,4 @@
-import { UserLocationProvider } from "./store/LocationContext";
+import { UserLocationProvider } from "./store/location.context";
 import { SearchPlace } from "./pages";
 
 function App() {

@@ -2,8 +2,11 @@ import { SelectDropdown } from "../select";
 import { useDispatch } from "react-redux";
 
 import { CATEGORIES_LIST } from "../../helpers/constants";
-import { getPlacesAsync, resetPlaces } from "../../store/NearbyPlacesSlice";
-import { useLocationContext } from "../../store/LocationContext";
+import {
+    getPlacesAsync,
+    resetPlaces,
+} from "../../pages/search_place/places.slice";
+import { useLocationContext } from "../../store/location.context";
 
 import "./index.css";
 

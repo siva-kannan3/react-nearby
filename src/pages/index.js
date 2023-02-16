@@ -1,1 +1,1 @@
-export { SearchPlace } from "./SearchPlace";
+export { SearchPlace } from "./search_place";

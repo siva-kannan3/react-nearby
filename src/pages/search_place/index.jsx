@@ -1,11 +1,12 @@
 import { useSelector } from "react-redux";
-import { Fallback } from "../components/fallback";
-import { Header } from "../components/header";
-import { MapsWidget } from "../components/map";
-import { PlacesList } from "../components/place_list";
-import { useLocationContext } from "../store/LocationContext";
 
-import "./searchplace.css";
+import { Fallback } from "../../components/fallback";
+import { Header } from "../../components/header";
+import { MapsWidget } from "../../components/map";
+import { PlacesList } from "../../components/place_list";
+import { useLocationContext } from "../../store/location.context";
+
+import "./index.css";
 
 export const SearchPlace = () => {
     const { hasPermission } = useLocationContext();

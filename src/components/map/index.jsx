@@ -1,7 +1,7 @@
 import GoogleMapReact from "google-map-react";
 import { useSelector } from "react-redux";
 
-import { useLocationContext } from "../../store/LocationContext";
+import { useLocationContext } from "../../store/location.context";
 import { Marker } from "../marker";
 
 export const MapsWidget = () => {
