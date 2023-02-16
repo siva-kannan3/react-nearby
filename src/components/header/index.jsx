@@ -13,9 +13,10 @@ import "./index.css";
 
 export const Header = () => {
     const dispatch = useDispatch();
-    const { latitude, longitude } = useLocationContext();
+    const { latitude, longitude, hasPermission } = useLocationContext();
 
     const onCategoryChange = (selectedValue) => {
+        if (!hasPermission) return;
         if (selectedValue) {
             dispatch(
                 getPlacesAsync({
