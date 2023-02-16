@@ -1,39 +1,28 @@
 import Select from "react-select";
-import { useDispatch } from "react-redux";
-
-import { CATEGORIES_LIST } from "../../helpers/constants";
-import { getPlacesAsync, resetPlaces } from "../../store/NearbyPlacesSlice";
-import { useLocationContext } from "../../store/LocationContext";
+import PropTypes from "prop-types";
 
 import "./index.css";
 
-export const SelectDropdown = () => {
-  const dispatch = useDispatch();
-  const { latitude, longitude } = useLocationContext();
-
-  const onCategoryChange = (selectedValue) => {
-    if (selectedValue) {
-      dispatch(
-        getPlacesAsync({
-          location: `${latitude},${longitude}`,
-          radius: 5000,
-          type: selectedValue.value,
-          key: process.env.REACT_APP_GOOGLE_PLACE_SEARCH_API_KEY,
-        })
-      );
-    } else {
-      dispatch(resetPlaces());
-    }
-  };
+export const SelectDropdown = (props) => {
+  const { options, onChange } = props;
 
   return (
     <Select
-      options={CATEGORIES_LIST}
+      options={options}
       aria-label={"Select category"}
+      placeholder={"Choose category"}
       className="dropdown"
       isClearable
       isSearchable={false}
-      onChange={onCategoryChange}
+      onChange={onChange}
     />
   );
+};
+
+SelectDropdown.propTypes = {
+  options: PropTypes.arrayOf({
+    value: PropTypes.string,
+    label: PropTypes.string,
+  }),
+  onChange: PropTypes.func,
 };
