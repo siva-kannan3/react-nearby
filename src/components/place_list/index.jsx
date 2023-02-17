@@ -9,10 +9,13 @@ export const PlacesList = ({ places = [] }) => {
         return <Fallback message={"No data to display"} />;
     }
     return (
-        <div className="place-list" data-testid={"places-list"}>
+        <ul
+            className="place-list place-list--reset"
+            data-testid={"places-list"}
+        >
             {places.map((mapEntry) => {
                 return (
-                    <div key={mapEntry.place_id} className="place-list__card">
+                    <li key={mapEntry.place_id} className="place-list__card">
                         <div className="place-list__card-info">
                             <span data-testid="place-list-card-name">
                                 {mapEntry.name}
@@ -25,10 +28,10 @@ export const PlacesList = ({ places = [] }) => {
                                 {mapEntry.user_ratings_total || 0}
                             </span>
                         </div>
-                    </div>
+                    </li>
                 );
             })}
-        </div>
+        </ul>
     );
 };
 
