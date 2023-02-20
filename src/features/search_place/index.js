@@ -1,5 +1,3 @@
-// Service
-import { MapService } from "./service/PlaceService";
 // Utils
 import { encodeQueryString } from "./helpers/utils";
 import { CATEGORIES_LIST } from "./helpers/constants";
@@ -24,7 +22,7 @@ import { UserLocationWrapper } from "./components";
 import { SearchPlace } from "./SearchPlace";
 
 // Export
-export { MapService, encodeQueryString, CATEGORIES_LIST };
+export { encodeQueryString, CATEGORIES_LIST };
 export {
     NearbyPlacesReducer,
     LocationReducer,
