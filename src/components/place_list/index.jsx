@@ -17,17 +17,18 @@ export const PlacesList = ({ places = [] }) => {
                 return (
                     <li key={mapEntry.place_id} className="place-list__card">
                         <div className="place-list__card-info">
-                            <span data-testid="place-list-card-name">
+                            <span
+                                data-testid="place-list-card-name"
+                                className="place-list__name"
+                            >
                                 {mapEntry.name}
                             </span>
-                            <span>⭐ {mapEntry.rating || 0}</span>
+                            <span>{`⭐ ${mapEntry.rating || 0}`}</span>
                         </div>
-                        <div className="place-list__card-rating">
-                            <span>
-                                Total user ratings -{" "}
-                                {mapEntry.user_ratings_total || 0}
-                            </span>
-                        </div>
+                        <span>
+                            Total user ratings -{" "}
+                            {mapEntry.user_ratings_total || 0}
+                        </span>
                     </li>
                 );
             })}

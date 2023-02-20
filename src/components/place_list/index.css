@@ -26,6 +26,11 @@
 .place-list__card-info {
     display: flex;
     justify-content: space-between;
+    gap: 4px;
+}
+
+.place-list__name {
+    flex: 1;
 }
 
 @media screen and (max-width: 768px) {
