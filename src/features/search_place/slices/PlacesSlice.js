@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-import { MapService } from "../../service";
+import { useSelector } from "react-redux";
 
 const initialState = {
     result: [],
@@ -41,22 +40,5 @@ export const {
     updateFailure,
     resetPlaces,
 } = NearbyPlacesSlice.actions;
-
-export const getPlacesAsync = (config = {}) => {
-    return async (dispatch) => {
-        try {
-            dispatch(requestLoading());
-            const { status, result } = await MapService.getNearbyPlaces(config);
-            if (status === "error") {
-                throw new Error("Get nearby places API failed");
-            }
-            dispatch(updatePlaces(result));
-        } catch (err) {
-            dispatch(updateFailure());
-        } finally {
-            dispatch(cancelLoading());
-        }
-    };
-};
 
 export default NearbyPlacesSlice.reducer;

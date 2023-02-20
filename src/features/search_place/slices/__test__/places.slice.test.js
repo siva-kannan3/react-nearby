@@ -2,7 +2,7 @@ import reducer, {
     requestLoading,
     updatePlaces,
     updateFailure,
-} from "./places.slice";
+} from "../PlacesSlice";
 
 describe("Test suite places slice reducer", () => {
     const initialState = {

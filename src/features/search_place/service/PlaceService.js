@@ -1,4 +1,4 @@
-import { encodeQueryString } from "../helpers/utils";
+import { encodeQueryString } from "../index";
 
 export const MapService = {
     getNearbyPlaces: async (config = {}) => {

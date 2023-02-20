@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import { Fallback } from "../fallback";
+import { Fallback } from "../";
 
 import "./index.css";
 

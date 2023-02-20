@@ -1,19 +1,16 @@
 import { SelectDropdown } from "../select";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
-import { CATEGORIES_LIST } from "../../helpers/constants";
-import {
-    getPlacesAsync,
-    resetPlaces,
-} from "../../pages/search_place/places.slice";
-import { useLocationContext } from "../../store/location.context";
+import { getPlacesAsync, resetPlaces, CATEGORIES_LIST } from "../../index";
 import logo from "./logo.svg";
 
 import "./index.css";
 
 export const Header = () => {
     const dispatch = useDispatch();
-    const { latitude, longitude, hasPermission } = useLocationContext();
+    const { latitude, longitude, hasPermission } = useSelector(
+        (state) => state.location
+    );
 
     const onCategoryChange = (selectedValue) => {
         if (!hasPermission) return;

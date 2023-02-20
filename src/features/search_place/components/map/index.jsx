@@ -1,11 +1,10 @@
 import GoogleMapReact from "google-map-react";
 import { useSelector } from "react-redux";
 
-import { useLocationContext } from "../../store/location.context";
-import { Marker } from "../marker";
+import { Marker } from "../";
 
 export const MapsWidget = () => {
-    const { latitude, longitude } = useLocationContext();
+    const { latitude, longitude } = useSelector((state) => state.location);
     const { result } = useSelector((state) => state.places);
 
     return (
