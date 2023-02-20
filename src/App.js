@@ -1,11 +1,11 @@
-import { SearchPlace } from "./pages";
+import { SearchPlace, UserLocationWrapper } from "./features/search_place";
 
 function App() {
-  return (
-    <div className="App">
-      <SearchPlace />
-    </div>
-  );
+    return (
+        <UserLocationWrapper>
+            <SearchPlace />
+        </UserLocationWrapper>
+    );
 }
 
 export default App;

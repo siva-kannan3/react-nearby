@@ -1,0 +1,50 @@
+.place-list {
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.place-list--reset {
+    margin: 0;
+    padding-inline-start: 0;
+    list-style-type: none;
+}
+
+.place-list__card {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-bottom: 1px solid lightgray;
+}
+
+.place-list__card:last-of-type {
+    border-bottom: none;
+}
+
+.place-list__card-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+.place-list__name {
+    flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .place-list {
+        flex-direction: row;
+        gap: 12px;
+        padding-inline: 12px;
+        align-items: center;
+    }
+
+    .place-list__card {
+        gap: 6px;
+        border: 1px solid lightgray;
+        border-radius: 4px;
+        min-width: 14rem;
+    }
+}
